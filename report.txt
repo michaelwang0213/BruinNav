@@ -1,0 +1,16 @@
+Big O:
+
+associate – if there are N elements in MyMap, then associate will take O(logN) steps
+
+find – if there are N elements in MyMap, then find will take O(logN) steps
+
+AtrractionMapper::init – if there are N elements in MapLoader::getSegments, P total attractions, each attraction having an average name length of Q, then AttractionMapper::init will take O(N+Q*PlogP) steps (realistically O(N+PlogP).
+
+getGeoCoord – if there are a total of N attractions, and each attraction having an average name length of P, then getGeoCoord will take O(NP+logN) steps (realistically O(logN)).
+
+SegmentMapper::init – if there are N elements in MapLoader::getSegments, and a total number of attractions P, then SegmentMapper::init will take O((N+P)*log(N+P)) steps.
+
+getSegments – if there are N elements in the map, then getSegments will take O(logN) steps
+(in this case N is equal to the total number of streetSegments + total number of attractions)
+
+navigate – if there are N elements in MapLoader::getSegments, assuming the maximum length of a direction vector is N elements, and that getSegments returns a vector of an average size of P, then navigate takes O(N*P*logN) steps.
